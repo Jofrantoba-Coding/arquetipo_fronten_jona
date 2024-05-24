@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Gestión Defensorial App - Arquetipo de proyecto</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+<style>
+    body { font-family: Arial, sans-serif; }
+    .jstree-icon { font-size: 18px; }
+    .icon-html { content: url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-code.svg'); }
+    .icon-css { content: url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-code.svg'); }
+    .icon-tsx { content: url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-code.svg'); }
+    .icon-json { content: url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-code.svg'); }
+    .icon-md { content: url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-text.svg'); }
+    .icon-img { content: url('https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-media.svg'); }
+</style>
+</head>
+<body>
+<h1>Gestión Defensorial App - Arquetipo de proyecto</h1>
+<div id="tree"></div>
+<script>
+    const treeData = [
+        {
+            text: "gestion-defensorial-app/",
+            children: [
+                {
+                    text: "public/",
+                    children: [
+                        { text: "index.html", icon: "icon-html" },
+                        { text: "favicon.ico", icon: "icon-img" }
+                    ]
+                },
+                {
+                    text: "src/",
+                    children: [
+                        {
+                            text: "uiutils/",
+                            children: [
+                                { text: "Notificacion.tsx", icon: "icon-tsx" },
+                                { text: "PopupProgress.tsx", icon: "icon-tsx" },
+                                { text: "UiMenuBar.tsx", icon: "icon-tsx" },
+                                { text: "UiStatusBar.tsx", icon: "icon-tsx" },
+                                { text: "UiTabPanel.tsx", icon: "icon-tsx" },
+                                { text: "UiTitleBar.tsx", icon: "icon-tsx" },
+                                { text: "UiToolBar.tsx", icon: "icon-tsx" }
+                            ]
+                        },
+                        {
+                            text: "uilayout/",
+                            children: [
+                                { text: "UiMantenimiento.tsx", icon: "icon-tsx" },
+                                { text: "UiScreenSesion.tsx", icon: "icon-tsx" }
+                            ]
+                        },
+                        {
+                            text: "views/",
+                            children: [
+                                {
+                                    text: "uihome/",
+                                    children: [{ text: "UiHome.tsx", icon: "icon-tsx" }]
+                                },
+                                {
+                                    text: "uihomeabogado/",
+                                    children: [{ text: "UiHomeAbogado.tsx", icon: "icon-tsx" }]
+                                },
+                                {
+                                    text: "uihomeciudadano/",
+                                    children: [{ text: "UiHomeCiudadano.tsx", icon: "icon-tsx" }]
+                                },
+                                {
+                                    text: "uihomeactividad/",
+                                    children: [{ text: "UiHomeActividad.tsx", icon: "icon-tsx" }]
+                                },
+                                {
+                                    text: "uihomesesion/",
+                                    children: [{ text: "UiHomeSesion.tsx", icon: "icon-tsx" }]
+                                },
+                                {
+                                    text: "uiiniciarsesion/",
+                                    children: [
+                                        { text: "InterUiIniciarSesion.tsx", icon: "icon-tsx" },
+                                        { text: "UiIniciarSesion.tsx", icon: "icon-tsx" },
+                                        { text: "UiIniciarSesionImpl.tsx", icon: "icon-tsx" }
+                                    ]
+                                },
+                                {
+                                    text: "uiabogadogrid/",
+                                    children: [
+                                        { text: "InterUiAbogadoGrid.tsx", icon: "icon-tsx" },
+                                        { text: "UiAbogadoGrid.tsx", icon: "icon-tsx" },
+                                        { text: "UiAbogadoGridImpl.tsx", icon: "icon-tsx" }
+                                    ]
+                                },
+                                {
+                                    text: "uiabogadomant/",
+                                    children: [
+                                        { text: "InterUiAbogadoMant.tsx", icon: "icon-tsx" },
+                                        { text: "UiAbogadoMant.tsx", icon: "icon-tsx" },
+                                        { text: "UiAbogadoMantImpl.tsx", icon: "icon-tsx" }
+                                    ]
+                                },
+                                {
+                                    text: "uiciudadanogrid/",
+                                    children: [
+                                        { text: "InterUiCiudadanoGrid.tsx", icon: "icon-tsx" },
+                                        { text: "UiCiudadanoGrid.tsx", icon: "icon-tsx" },
+                                        { text: "UiCiudadanoGridImpl.tsx", icon: "icon-tsx" }
+                                    ]
+                                },
+                                {
+                                    text: "uiciudadanomant/",
+                                    children: [
+                                        { text: "InterUiCiudadanoMant.tsx", icon: "icon-tsx" },
+                                        { text: "UiCiudadanoMant.tsx", icon: "icon-tsx" },
+                                        { text: "UiCiudadanoMantImpl.tsx", icon: "icon-tsx" }
+                                    ]
+                                },
+                                {
+                                    text: "uiactividadgrid/",
+                                    children: [
+                                        { text: "InterUiActividadGrid.tsx", icon: "icon-tsx" },
+                                        { text: "UiActividadGrid.tsx", icon: "icon-tsx" },
+                                        { text: "UiActividadGridImpl.tsx", icon: "icon-tsx" }
+                                    ]
+                                },
+                                {
+                                    text: "uiactividadmant/",
+                                    children: [
+                                        { text: "InterUiActividadMant.tsx", icon: "icon-tsx" },
+                                        { text: "UiActividadMant.tsx", icon: "icon-tsx" },
+                                        { text: "UiActividadMantImpl.tsx", icon: "icon-tsx" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            text: "resources/",
+                            children: [
+                                { text: "fonts/" },
+                                {
+                                    text: "images/",
+                                    children: [{ text: "logo.png", icon: "icon-img" }]
+                                },
+                                {
+                                    text: "styles/",
+                                    children: [
+                                        { text: "App.css", icon: "icon-css" },
+                                        { text: "UiHome.css", icon: "icon-css" },
+                                        { text: "UiHomeSesion.css", icon: "icon-css" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                { text: "App.tsx", icon: "icon-tsx" },
+                { text: "index.tsx", icon: "icon-tsx" },
+                { text: "package.json", icon: "icon-json" },
+                { text: "tsconfig.json", icon: "icon-json" },
+                { text: "README.md", icon: "icon-json" }
+            ]
+        }
+    ];
+
+    $(document).ready(function() {
+        $('#tree').jstree({
+            'core': {
+                'data': treeData
+            },
+            'themes': {
+                'icons': true
+            },
+            'plugins': ["wholerow"]
+        });
+    });
+</script>
+</body>
+</html>
